@@ -1,0 +1,124 @@
+<div class="container">
+   <h1 style="font-family: Monaco, monospace">ngx-md-icon</h1>
+   <h1>Simple Icons</h1>
+   <div class="simple-icons">
+      <md-icon [icons]="[icons.industryVehicle]"></md-icon>
+      <md-icon [icons]="[icons.person]"></md-icon>
+      <md-icon [icons]="[icons.bear]"></md-icon>
+      <md-icon [icons]="[icons.dolphin]"></md-icon>
+      <md-icon [icons]="[icons.duck]"></md-icon>
+      <md-icon [icons]="[icons.elephant]"></md-icon>
+      <md-icon [icons]="[icons.horse]"></md-icon>
+      <md-icon [icons]="[icons.owl]"></md-icon>
+   </div>
+   <div class="code">
+      <code>
+         &lt;md-icon [icons]=&quot;[icons.industryVehicle]&quot;&gt;&lt;/md-icon&gt;
+      </code>
+   </div>
+   <div class="code">
+      <code>
+         {{ "   .md-icon {\n" +
+      "      margin: 0 6px;\n" +
+      "   }" }}
+      </code>
+   </div>
+
+   <h1>Size 48px</h1>
+   <div class="px48-icons">
+      <md-icon [icons]="[icons.industryVehicle]"></md-icon>
+      <md-icon [icons]="[icons.person]"></md-icon>
+      <md-icon [icons]="[icons.bear]"></md-icon>
+      <md-icon [icons]="[icons.dolphin]"></md-icon>
+      <md-icon [icons]="[icons.duck]"></md-icon>
+      <md-icon [icons]="[icons.elephant]"></md-icon>
+      <md-icon [icons]="[icons.horse]"></md-icon>
+      <md-icon [icons]="[icons.owl]"></md-icon>
+   </div>
+   <div class="code">
+      <code>
+         &lt;md-icon [icons]=&quot;[icons.industryVehicle]&quot;&gt;&lt;/md-icon&gt;
+      </code>
+   </div>
+   <div class="code">
+      <code>
+         {{ ".md-icon {\n" +
+      "         width: 48px;\n" +
+      "         height: 48px;\n" +
+      "      }" }}
+      </code>
+   </div>
+
+   <h1>Stacked</h1>
+   <div class="px48-icons strike-icons">
+      <md-icon [icons]="[icons.industryVehicle, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.person, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.bear, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.dolphin, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.duck, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.elephant, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.horse, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.owl, icons.strike]"></md-icon>
+   </div>
+   <div class="code">
+      <code>
+         &lt;md-icon [icons]=&quot;[icons.industryVehicle, icons.strike]&quot;&gt;&lt;/md-icon&gt;
+      </code>
+   </div>
+   <div class="code">
+      <pre>{{ "::ng-deep .md-icon {\n" +
+      "   .icon-1 {\n" +
+      "      transform: scale(1.5);\n" +
+      "      transform-origin: center;\n" +
+      "      color: red;\n" +
+      "   }\n" +
+      "}"}}</pre>
+   </div>
+
+   <h1>Animated</h1>
+   <div class="px48-icons strike-icons animate-icons">
+      <md-icon [icons]="[icons.industryVehicle, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.person, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.bear, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.dolphin, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.duck, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.elephant, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.horse, icons.strike]"></md-icon>
+      <md-icon [icons]="[icons.owl, icons.strike]"></md-icon>
+   </div>
+   <div class="code">
+      <code>
+         &lt;md-icon [icons]=&quot;[icons.industryVehicle, icons.strike]&quot;&gt;&lt;/md-icon&gt;
+      </code>
+   </div>
+   <div class="code">
+      <pre>{{ "::ng-deep .md-icon {\n" +
+      "   .icon-0 {\n" +
+      "      animation: scaleAnimation 3s infinite;\n" +
+      "      transform-origin: center;\n" +
+      "      @keyframes scaleAnimation {\n" +
+      "         0% {\n" +
+      "            transform: scale(1);\n" +
+      "         }\n" +
+      "         50% {\n" +
+      "            transform: scale(0.5);\n" +
+      "         }\n" +
+      "         90% {\n" +
+      "            transform: scale(1.1);\n" +
+      "         }\n" +
+      "      }\n" +
+      "   }\n" +
+      "   .icon-1 {\n" +
+      "      animation: rotateAnimation 1s infinite linear;\n" +
+      "      @keyframes rotateAnimation {\n" +
+      "         0% {\n" +
+      "            transform: rotate(0deg);\n" +
+      "         }\n" +
+      "         100% {\n" +
+      "            transform: rotate(360deg);\n" +
+      "         }\n" +
+      "      }\n" +
+      "   }\n" +
+      "}"}}</pre>
+   </div>
+</div>

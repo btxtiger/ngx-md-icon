@@ -1,0 +1,21 @@
+{
+   "name": "ngx-md-icon",
+   "version": "1.0.4",
+   "description": "Easily use Material Design Icons @mdi/js with Angular",
+   "author": "Jonas Gnioui <btxtiger@icloud.com>",
+   "license": "MIT",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/btxtiger/ngx-md-icon"
+   },
+   "keywords": [
+      "angular",
+      "angular-component",
+      "ui",
+      "library",
+      "mds-icon",
+      "material icons"
+   ],
+   "peerDependencies": {},
+   "dependencies": {}
+}

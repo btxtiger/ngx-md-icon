@@ -1,0 +1,75 @@
+:host {
+   .container {
+      margin: 0 auto;
+      max-width: 900px;
+      background-color: white;
+      min-height: 100vh;
+      position: relative;
+      padding: 20px;
+   }
+
+   .md-icon {
+      margin: 0 6px;
+   }
+
+   .simple-icons {
+   }
+
+   .px48-icons {
+      .md-icon {
+         width: 48px;
+         height: 48px;
+      }
+   }
+
+   .strike-icons {
+      ::ng-deep .md-icon {
+         .icon-1 {
+            transform: scale(1.5);
+            transform-origin: center;
+            color: red;
+         }
+      }
+   }
+
+   .animate-icons {
+      ::ng-deep .md-icon {
+         .icon-0 {
+            animation: scaleAnimation 3s infinite;
+            transform-origin: center;
+            @keyframes scaleAnimation {
+               0% {
+                  transform: scale(1);
+               }
+               50% {
+                  transform: scale(0.5);
+               }
+               90% {
+                  transform: scale(1.1);
+               }
+            }
+         }
+         .icon-1 {
+            animation: rotateAnimation 1s infinite linear;
+            @keyframes rotateAnimation {
+               0% {
+                  transform: rotate(0deg);
+               }
+               100% {
+                  transform: rotate(360deg);
+               }
+            }
+         }
+      }
+   }
+
+   .code {
+      margin: 10px 0;
+      code,
+      pre {
+         background-color: #e2f1f6;
+         padding: 4px;
+         margin: 2px 0;
+      }
+   }
+}
