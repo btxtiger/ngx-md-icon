@@ -75,6 +75,7 @@
                "configurations": {
                   "production": {
                      "outputPath": "docs",
+                     "baseHref": "/ngx-md-icon/",
                      "budgets": [
                         {
                            "type": "initial",
