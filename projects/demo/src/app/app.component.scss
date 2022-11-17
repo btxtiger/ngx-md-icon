@@ -17,8 +17,15 @@
 
    .px48-icons {
       .md-icon {
-         width: 48px;
-         height: 48px;
+         min-width: 48px;
+         min-height: 48px;
+      }
+
+      ::ng-deep .person-overlay {
+         .icon-0 {
+            color: red;
+            opacity: .3;
+         }
       }
    }
 

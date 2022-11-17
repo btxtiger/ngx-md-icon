@@ -20,24 +20,43 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
    @HostBinding('class')
    public classes = 'md-icon mat-icon';
 
+   @HostBinding('style.width')
+   public styleWidth: string | undefined;
+
    @Input()
    public icon?: string;
 
    @Input()
    public icons?: string[];
 
+   @Input()
+   public texts?: string[];
+
+   @Input()
+   public xViewBox: number = 24;
+
+   @Input()
+   public yViewBox: number = 24;
+
+   @Input()
+   public xTextPos: number = 0;
+
+   @Input()
+   public yTextPos: number = 19;
+
    public renderIcons: string[] = [];
 
    constructor() {}
 
    ngOnInit(): void {
-      if (!this.icon && !this.icons) {
-         console.error('NgxMdIconComponent: Input() [icon] or [icons] is required');
+      if (!this.icon && !this.icons && !this.texts) {
+         console.error('NgxMdIconComponent: Input() [icon] or [icons] or [texts] is required');
       }
+      this.init();
    }
 
    ngOnChanges(changes: SimpleChanges): void {
-      if (changes['icon'] || changes['icons']) {
+      if ((changes['icon'] && !changes['icon'].isFirstChange()) || (changes['icons'] && !changes['icons'].isFirstChange())) {
          this.init();
       }
    }
@@ -53,6 +72,10 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
       }
       if (this.icons?.length) {
          icons.push(...this.icons);
+      }
+
+      if (this.xViewBox) {
+         this.styleWidth = this.xViewBox + 'px';
       }
 
       this.renderIcons = icons;
