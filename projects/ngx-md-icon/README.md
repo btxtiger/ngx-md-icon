@@ -62,6 +62,10 @@ export class AppComponent {
 
 // Stack multiple icons
 <md-icon [icons]="[icons.industryVehicle, icons.strike]"></md-icon>
+
+// Text
+<md-icon [texts]="['CocaCola']" [xViewBox]="80" [yViewBox]="48" [yTextPos]="29"></md-icon>
+<md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
 ```
 
 ### Usage with Angular Material
