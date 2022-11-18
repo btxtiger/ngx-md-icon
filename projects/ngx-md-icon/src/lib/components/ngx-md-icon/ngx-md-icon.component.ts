@@ -74,7 +74,7 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
          icons.push(...this.icons);
       }
 
-      if (this.xViewBox) {
+      if (this.xViewBox && this.texts?.length) {
          this.styleWidth = this.xViewBox + 'px';
       }
 
