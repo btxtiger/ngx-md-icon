@@ -7,7 +7,7 @@
       "build": "ng build",
       "build:demo": "ng build demo",
       "build:lib": "ng build ngx-md-icon",
-      "publish": "npm run build:lib && cd dist/ngx-md-icon && npm publish",
+      "publish": "npm run build demo && npm run build:lib && cd dist/ngx-md-icon && npm publish",
       "watch": "ng build --watch --configuration development",
       "test": "ng test",
       "lint": "ng lint"
