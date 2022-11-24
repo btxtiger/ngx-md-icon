@@ -123,4 +123,156 @@
       "   }\n" +
       "}"}}</pre>
    </div>
+
+   <h1>Angular Material</h1>
+
+
+   <p>
+      <mat-toolbar color="primary">
+         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+         </button>
+         <span>My App</span>
+         <span class="example-spacer" flexGrow></span>
+         <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>notifications_off</mat-icon>
+         </button>
+         <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <md-icon [icon]="icons.disableAlerts"></md-icon>
+         </button>
+         <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+         </button>
+      </mat-toolbar>
+   </p>
+
+
+
+
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+         <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+         <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+         </button>
+         <button mat-menu-item>
+            <md-icon [icon]="icons.disableAlerts"></md-icon>
+            <span>Disable alerts</span>
+         </button>
+         <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+         </button>
+      </mat-menu>
+   </div>
+
+
+
+
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <mat-list>
+         <div mat-subheader>Folders</div>
+         <mat-list-item *ngFor="let folder of [1]">
+            <mat-icon matListItemIcon>folder</mat-icon>
+            <div matListItemTitle>{{folder}}</div>
+            <div matListItemLine>{{folder | date}}</div>
+         </mat-list-item>
+         <mat-list-item *ngFor="let folder of [1]">
+            <md-icon [icon]="icons.manufacturer" matListItemIcon></md-icon>
+            <div matListItemTitle>{{folder}}</div>
+            <div matListItemLine>{{folder | date}}</div>
+         </mat-list-item>
+      </mat-list>
+
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <mat-chip-listbox aria-label="Fish selection">
+         <mat-chip-option>One fish</mat-chip-option>
+         <mat-chip-option>Two fish</mat-chip-option>
+         <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+         <mat-chip-option color="warn">Warn fish</mat-chip-option>
+      </mat-chip-listbox>
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <mat-form-field appearance="fill">
+         <mat-label>Choose a date</mat-label>
+         <input matInput>
+         <mat-hint>MM/DD/YYYY</mat-hint>
+         <md-icon [icon]="icons.download" matIconPrefix></md-icon>
+         <md-icon [icon]="icons.download" matIconSuffix></md-icon>
+         <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle> -->
+         <!-- <mat-datepicker #picker></mat-datepicker> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+         <mat-label>Choose a date</mat-label>
+         <input matInput>
+         <mat-hint>MM/DD/YYYY</mat-hint>
+         <!-- <md-icon [icon]="icons.download" matIconSuffix></md-icon> -->
+         <mat-datepicker-toggle matIconSuffix></mat-datepicker-toggle>
+         <mat-datepicker-toggle matIconPrefix></mat-datepicker-toggle>
+         <!-- <mat-datepicker #picker></mat-datepicker> -->
+      </mat-form-field>
+
+      <p>
+         <mat-form-field appearance="fill">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+         </mat-form-field>
+      </p>
+   </div>
+
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-icon-button color="primary" style="">
+         <mat-icon>delete</mat-icon>
+      </button>
+
+      <button mat-icon-button color="primary" style="">
+         <md-icon [icon]="icons.manufacturer"></md-icon>
+      </button>
+   </div>
+
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-fab color="primary" style="">
+         <mat-icon>delete</mat-icon>
+      </button>
+
+      <button mat-fab color="primary" style="">
+         <md-icon [icon]="icons.manufacturer"></md-icon>
+      </button>
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-mini-fab color="primary" style="">
+         <mat-icon>delete</mat-icon>
+      </button>
+
+      <button mat-mini-fab color="primary" style="">
+         <md-icon [icon]="icons.manufacturer"></md-icon>
+      </button>
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-flat-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
+
+      <button mat-flat-button color="primary" style=""><md-icon [icon]="icons.manufacturer"></md-icon> Manufacturer</button>
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-raised-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
+
+      <button mat-raised-button color="primary" style=""><md-icon [icon]="icons.manufacturer"></md-icon> Manufacturer</button>
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
+
+      <button mat-button color="primary" style=""><md-icon [icon]="icons.manufacturer"></md-icon> Manufacturer</button>
+   </div>
+   <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <button mat-stroked-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
+
+      <button mat-stroked-button color="primary" style=""><md-icon [icon]="icons.manufacturer"></md-icon> Manufacturer</button>
+   </div>
+
 </div>
