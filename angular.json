@@ -57,29 +57,29 @@
         }
       }
     },
-    "demo": {
+    "ngx-md-icon-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/demo",
-      "sourceRoot": "projects/demo/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo",
-            "index": "projects/demo/src/index.html",
-            "main": "projects/demo/src/main.ts",
-            "polyfills": "projects/demo/src/polyfills.ts",
-            "tsConfig": "projects/demo/tsconfig.app.json",
+            "outputPath": "dist/ngx-md-icon-demo",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "projects/demo/src/styles.scss"
@@ -104,8 +104,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/demo/src/environments/environment.ts",
-                  "with": "projects/demo/src/environments/environment.prod.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -142,17 +142,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/demo/src/test.ts",
-            "polyfills": "projects/demo/src/polyfills.ts",
-            "tsConfig": "projects/demo/tsconfig.spec.json",
-            "karmaConfig": "projects/demo/karma.conf.js",
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "projects/demo/src/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -161,8 +161,8 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/demo/**/*.ts",
-              "projects/demo/**/*.html"
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         }
