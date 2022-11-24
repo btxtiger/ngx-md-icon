@@ -14,6 +14,8 @@ import { NgxMdIconModule } from '../../projects/ngx-md-icon/src/lib/ngx-md-icon.
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
    declarations: [AppComponent],
@@ -31,6 +33,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
       MatToolbarModule,
       MatChipsModule,
       MatDatepickerModule,
+      MatTabsModule,
+      MatTooltipModule,
    ],
    providers: [],
    bootstrap: [AppComponent],

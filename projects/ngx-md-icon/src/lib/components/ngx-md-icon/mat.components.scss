@@ -1,0 +1,33 @@
+/**
+ * Angular Material Legacy Styles
+ */
+
+/*
+ * For Angular < 15 it is required to apply a bugfix for this open issue, to properly center the icon in the button.
+ * Read more: https://github.com/angular/components/issues/18401
+*/
+
+// Fix mat-button icon not centered
+.mat-button-wrapper {
+   &:has(md-icon.md-icon) {
+      display: flex;
+      align-items: center;
+   }
+
+   // Firefox :has() fallback
+   @supports (-moz-appearance: none) {
+      display: flex;
+      align-items: center;
+   }
+}
+// Center x y for icon buttons
+.mat-icon-button .mat-button-wrapper {
+   &:has(md-icon.md-icon) {
+      justify-content: center;
+   }
+
+   // Firefox :has() fallback
+   @supports (-moz-appearance: none) {
+      justify-content: center;
+   }
+}

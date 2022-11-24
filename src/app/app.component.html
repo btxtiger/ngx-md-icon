@@ -133,104 +133,112 @@
 
       <p>
          <mat-toolbar color="primary">
-            <button mat-icon-button  >
+            <button mat-icon-button matTooltip="mat-icon">
                <mat-icon>menu</mat-icon>
             </button>
 
-            <button mat-icon-button  >
+            <button mat-icon-button matTooltip="md-icon">
                <md-icon [icon]="icons.menu"></md-icon>
             </button>
-            <span style="flex-grow: 1;"></span>
-
-            <span>mat-icon <md-icon [icon]="icons.arrowLeftRight" middle></md-icon> md-icon</span>
 
             <span style="flex-grow: 1;"></span>
-            <button mat-icon-button class="example-icon favorite-icon">
+
+            <span>mat-icon <md-icon [icon]="icons.arrowLeftRight" middle matTooltip="md-icon"></md-icon> md-icon</span>
+
+            <span style="flex-grow: 1;"></span>
+
+            <button mat-icon-button matTooltip="mat-icon">
                <mat-icon>notifications_off</mat-icon>
             </button>
-            <button mat-icon-button >
+
+            <button mat-icon-button matTooltip="md-icon">
                <md-icon [icon]="icons.disableAlerts"></md-icon>
             </button>
 
-            <button mat-icon-button >
+            <button mat-icon-button matTooltip="mat-icon">
                <mat-icon>share</mat-icon>
             </button>
 
-            <button mat-icon-button >
+            <button mat-icon-button matTooltip="md-icon">
                <md-icon [icon]="icons.share"></md-icon>
             </button>
          </mat-toolbar>
       </p>
 
 
-
-
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <div class="row-box">
          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
             <mat-icon>more_vert</mat-icon>
          </button>
          <mat-menu #menu="matMenu">
             <button mat-menu-item>
-               <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
-               <span>Disable alerts</span>
+               <mat-icon>notifications_off</mat-icon>
+               <span>mat-icon</span>
             </button>
             <button mat-menu-item>
                <md-icon [icon]="icons.disableAlerts"></md-icon>
-               <span>Disable alerts</span>
+               <span>md-icon</span>
             </button>
             <button mat-menu-item>
-               <mat-icon>notifications_off</mat-icon>
-               <span>Disable alerts</span>
+               <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+               <span>md-icon</span>
             </button>
          </mat-menu>
       </div>
 
 
-
-
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <div class="row-box">
          <mat-list>
             <h3>Folders</h3>
             <mat-list-item *ngFor="let folder of [1]">
-               <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay" matListItemIcon></md-icon>
-               <div matListItemTitle>{{folder}}</div>
-               <div matListItemLine>{{folder | date}}</div>
+               <mat-icon matListItemIcon>folder</mat-icon>
+               <div matListItemTitle>mat-icon</div>
+               <div matListItemLine>mat-icon</div>
             </mat-list-item>
             <mat-list-item *ngFor="let folder of [1]">
-               <mat-icon matListItemIcon>folder</mat-icon>
-               <div matListItemTitle>{{folder}}</div>
-               <div matListItemLine>{{folder | date}}</div>
+               <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay" matListItemIcon></md-icon>
+               <div matListItemTitle>md-icon</div>
+               <div matListItemLine>md-icon</div>
             </mat-list-item>
             <mat-list-item *ngFor="let folder of [1]">
                <md-icon [icon]="icons.delete" matListItemIcon></md-icon>
-               <div matListItemTitle>{{folder}}</div>
-               <div matListItemLine>{{folder | date}}</div>
+               <div matListItemTitle>md-icon</div>
+               <div matListItemLine>md-icon</div>
             </mat-list-item>
          </mat-list>
 
       </div>
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <div class="row-box">
          <mat-chip-listbox aria-label="Fish selection">
-            <mat-chip-option><md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon> md-icon</mat-chip-option>
-            <mat-chip-option><md-icon [icon]="icons.smile"></md-icon> md-icon</mat-chip-option>
-            <mat-chip-option><mat-icon>sentiment_very_satisfied</mat-icon> mat-icon</mat-chip-option>
+            <mat-chip-option>
+               <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+               md-icon
+            </mat-chip-option>
+            <mat-chip-option>
+               <md-icon [icon]="icons.smile"></md-icon>
+               md-icon
+            </mat-chip-option>
+            <mat-chip-option>
+               <mat-icon>sentiment_very_satisfied</mat-icon>
+               mat-icon
+            </mat-chip-option>
          </mat-chip-listbox>
       </div>
 
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
+      <div class="row-box">
          <mat-form-field appearance="fill">
             <mat-label>md-icon</mat-label>
             <input matInput placeholder="Placeholder">
             <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay" matIconPrefix></md-icon>
             <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay" matIconSuffix></md-icon>
-            <mat-hint>Hint</mat-hint>
+            <mat-hint>md-icon</mat-hint>
          </mat-form-field>
          <mat-form-field appearance="fill">
             <mat-label>md-icon</mat-label>
             <input matInput placeholder="Placeholder">
             <md-icon [icon]="icons.smile" matIconPrefix></md-icon>
             <md-icon [icon]="icons.smile" matIconSuffix></md-icon>
-            <mat-hint>Hint</mat-hint>
+            <mat-hint>md-icon</mat-hint>
          </mat-form-field>
 
          <mat-form-field appearance="fill">
@@ -238,93 +246,150 @@
             <input matInput placeholder="Placeholder">
             <mat-icon matIconSuffix>sentiment_very_satisfied</mat-icon>
             <mat-icon matIconPrefix>sentiment_very_satisfied</mat-icon>
-            <mat-hint>Hint</mat-hint>
+            <mat-hint>mat-icon</mat-hint>
          </mat-form-field>
 
          <mat-form-field appearance="fill">
             <mat-label>mat-date-picker-toggle</mat-label>
             <input matInput>
-            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-hint>datepicker-toggle</mat-hint>
             <mat-datepicker-toggle matIconSuffix></mat-datepicker-toggle>
             <mat-datepicker-toggle matIconPrefix></mat-datepicker-toggle>
          </mat-form-field>
       </div>
 
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-icon-button color="primary" style="">
+      <div class="row-box">
+         <button mat-icon-button color="primary" style="" matTooltip="mat-icon">
             <mat-icon>delete</mat-icon>
          </button>
 
-         <button mat-icon-button color="primary" style="">
+         <button mat-icon-button color="primary" style="" matTooltip="md-icon">
             <md-icon [icon]="icons.delete"></md-icon>
          </button>
 
-         <button mat-icon-button color="primary" style="">
+         <button mat-icon-button color="primary" style="" matTooltip="md-icon">
             <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
          </button>
       </div>
 
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-fab color="primary" style="">
+      <div class="row-box">
+         <button mat-fab color="primary" style="" matTooltip="mat-icon">
             <mat-icon>delete</mat-icon>
          </button>
 
-         <button mat-fab color="primary" style="">
+         <button mat-fab color="primary" style="" matTooltip="md-icon">
             <md-icon [icon]="icons.delete"></md-icon>
          </button>
 
-         <button mat-fab color="primary" style="">
+         <button mat-fab color="primary" style="" matTooltip="md-icon">
             <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
          </button>
       </div>
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-mini-fab color="primary" style="">
+      <div class="row-box">
+         <button mat-mini-fab color="primary" style="" matTooltip="mat-icon">
             <mat-icon>delete</mat-icon>
          </button>
 
-         <button mat-mini-fab color="primary" style="">
+         <button mat-mini-fab color="primary" style="" matTooltip="md-icon">
             <md-icon [icon]="icons.delete"></md-icon>
          </button>
 
-         <button mat-mini-fab color="primary" style="">
+         <button mat-mini-fab color="primary" style="" matTooltip="md-icon">
             <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
          </button>
       </div>
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-flat-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
-
-         <button mat-flat-button color="primary" style=""><md-icon [icon]="icons.delete"></md-icon> Super Duper</button>
-         <button mat-flat-button color="primary" style=""><md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon> Super Duper</button>
-      </div>
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-raised-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
-
-         <button mat-raised-button color="primary" style=""><md-icon [icon]="icons.delete"></md-icon> Super Duper</button>
-         <button mat-raised-button color="primary" style=""><md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon> Super Duper</button>
-      </div>
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
-
-         <button mat-button color="primary" style=""><md-icon [icon]="icons.delete"></md-icon> Super Duper</button>
-         <button mat-button color="primary" style=""><md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon> Super Duper</button>
-      </div>
-      <div style="border: 1px solid red; display: flex; align-items: center; justify-content: center">
-         <button mat-stroked-button color="primary" style=""><mat-icon>delete</mat-icon> Super Duper</button>
-
-         <button mat-stroked-button color="primary" style=""><md-icon [icon]="icons.delete"></md-icon> Super Duper</button>
-         <button mat-stroked-button color="primary" style=""><md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon> Super Duper</button>
-      </div>
-
-      <div style="border: 1px solid red; margin-top: 10px">
-         <h1>
+      <div class="row-box">
+         <button mat-flat-button color="primary" style="">
             <mat-icon>delete</mat-icon>
-            Delete H1 Headline
-         </h1>
-         <h1>
+            mat-icon
+         </button>
+
+         <button mat-flat-button color="primary" style="">
             <md-icon [icon]="icons.delete"></md-icon>
-            Delete H1 Headline
-         </h1>
+            md-icon
+         </button>
+         <button mat-flat-button color="primary" style="">
+            <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+            md-icon
+         </button>
       </div>
+      <div class="row-box">
+         <button mat-raised-button color="primary" style="">
+            <mat-icon>delete</mat-icon>
+            mat-icon
+         </button>
+
+         <button mat-raised-button color="primary" style="">
+            <md-icon [icon]="icons.delete"></md-icon>
+            md-icon
+         </button>
+         <button mat-raised-button color="primary" style="">
+            <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+            md-icon
+         </button>
+      </div>
+      <div class="row-box">
+         <button mat-button color="primary" style="">
+            <mat-icon>delete</mat-icon>
+            mat-icon
+         </button>
+
+         <button mat-button color="primary" style="">
+            <md-icon [icon]="icons.delete"></md-icon>
+            md-icon
+         </button>
+         <button mat-button color="primary" style="">
+            <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+            md-icon
+         </button>
+      </div>
+      <div class="row-box">
+         <button mat-stroked-button color="primary" style="">
+            <mat-icon>delete</mat-icon>
+            mat-icon
+         </button>
+
+         <button mat-stroked-button color="primary" style="">
+            <md-icon [icon]="icons.delete"></md-icon>
+            md-icon
+         </button>
+         <button mat-stroked-button color="primary" style="">
+            <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+            md-icon
+         </button>
+      </div>
+
+
+      <div class="row-box">
+         <mat-tab-group>
+            <mat-tab>
+               <ng-template mat-tab-label>
+                  <mat-icon>sentiment_very_satisfied</mat-icon>
+                  MAT
+               </ng-template>
+            </mat-tab>
+            <mat-tab>
+               <ng-template mat-tab-label>
+                  <md-icon [icon]="icons.smile"></md-icon>
+                  MDI
+               </ng-template>
+            </mat-tab>
+         </mat-tab-group>
+      </div>
+
+
+      <div class="row-box">
+         <h2 style="margin-right: 12px">
+            <mat-icon>delete</mat-icon>
+            mat-icon
+         </h2>
+         <h2>
+            <md-icon [icon]="icons.delete"></md-icon>
+            md-icon
+         </h2>
+      </div>
+
+
    </div>
 
 </div>

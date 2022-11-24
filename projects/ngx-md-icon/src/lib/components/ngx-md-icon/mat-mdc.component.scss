@@ -1,4 +1,3 @@
-
 /**
  * Angular Material MDC Styles
  */
@@ -17,7 +16,6 @@
       width: 1.125rem !important;
       margin-left: -4px;
       margin-right: 4px;
-
    }
 }
 .mat-mdc-button > .mdc-button__label {
@@ -27,7 +25,8 @@
 }
 
 // Fab
-.mat-mdc-fab, .mat-mdc-mini-fab {
+.mat-mdc-fab,
+.mat-mdc-mini-fab {
    & > .mdc-button__label {
       & > md-icon.md-icon {
          vertical-align: text-top;
@@ -45,23 +44,52 @@
 }
 
 // Form field prefix
-.mat-mdc-form-field-icon-prefix, .mat-mdc-form-field-icon-suffix {
-   &  > md-icon.md-icon {
+.mat-mdc-form-field-icon-prefix,
+.mat-mdc-form-field-icon-suffix {
+   & > md-icon.md-icon {
       padding: 12px;
    }
 }
 
 // Menu items
 .mat-mdc-menu-item .mdc-list-item__primary-text {
-   &  > md-icon.md-icon {
+   &:has(md-icon.md-icon) {
+      display: flex;
+      align-items: center;
+   }
+
+   // Firefox :has() fallback
+   @supports (-moz-appearance: none) {
+      display: flex;
+      align-items: center;
+   }
+
+   & > md-icon.md-icon {
       margin-right: 16px;
-      vertical-align: middle;
+   }
+}
+
+// Tabs
+.mat-mdc-tab .mdc-tab__text-label {
+   &:has(md-icon.md-icon) {
+      display: flex;
+      align-items: center;
+   }
+
+   // Firefox :has() fallback
+   @supports (-moz-appearance: none) {
+      display: flex;
+      align-items: center;
+   }
+
+   & > md-icon.md-icon {
+      margin-right: 16px;
    }
 }
 
 // Chips
 .mat-mdc-chip .mdc-evolution-chip__text-label {
-   &  > md-icon.md-icon {
+   & > md-icon.md-icon {
       width: 20px !important;
       height: 20px;
       vertical-align: bottom;

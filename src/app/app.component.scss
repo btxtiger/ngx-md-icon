@@ -1,7 +1,7 @@
 :host {
    .container {
       margin: 0 auto;
-      max-width: 1024px;
+      max-width: 1200px;
       background-color: white;
       min-height: 100vh;
       position: relative;
@@ -12,11 +12,22 @@
    ::ng-deep .person-overlay {
       .icon-0 {
          color: red;
-         opacity: .3;
+         opacity: .5;
       }
    }
 
+   .row-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid lightgray;
+      padding: 10px;
+      margin-bottom: 6px;
+   }
+
    .icon-demo {
+
 
       .md-icon {
          margin: 0 6px;

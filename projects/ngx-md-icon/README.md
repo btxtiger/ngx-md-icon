@@ -81,22 +81,6 @@ export class AppComponent {
 
 The component should work out of the box with Angular Material.
 
-
-#### Bug: Angular < 15
-However, for Angular < 15 it is required to apply a bugfix for this open issue, to properly center the icon in the button.<br>
-Read more: [https://github.com/angular/components/issues/18401](https://github.com/angular/components/issues/18401)
-
-```scss
-// global.scss
-
-// Fix mat-icon-button icon not centered
-.mat-icon-button .mat-button-wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-```
-
 ```html
 <button mat-icon-button>
    <md-icon [icons]="[icons.industryVehicle, icons.strike]"></md-icon>
