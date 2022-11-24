@@ -10,7 +10,7 @@
    & > md-icon.md-icon {
       display: inline-block;
       position: relative;
-      vertical-align: sub;
+      vertical-align: text-bottom;
       font-size: 1.125rem;
       height: 1.125rem;
       width: 1.125rem !important;
@@ -34,15 +34,6 @@
    }
 }
 
-// Scaling
-.mdc-list-item__primary-text,
-.mat-mdc-icon-button {
-   & > md-icon.md-icon {
-      //transform: scale(.9);
-      //transform-origin: center;
-   }
-}
-
 // Form field prefix
 .mat-mdc-form-field-icon-prefix,
 .mat-mdc-form-field-icon-suffix {
@@ -53,16 +44,8 @@
 
 // Menu items
 .mat-mdc-menu-item .mdc-list-item__primary-text {
-   &:has(md-icon.md-icon) {
-      display: flex;
-      align-items: center;
-   }
-
-   // Firefox :has() fallback
-   @supports (-moz-appearance: none) {
-      display: flex;
-      align-items: center;
-   }
+   display: flex;
+   align-items: center;
 
    & > md-icon.md-icon {
       margin-right: 16px;
@@ -71,16 +54,18 @@
 
 // Tabs
 .mat-mdc-tab .mdc-tab__text-label {
-   &:has(md-icon.md-icon) {
-      display: flex;
-      align-items: center;
-   }
+   display: flex;
+   align-items: center;
 
-   // Firefox :has() fallback
-   @supports (-moz-appearance: none) {
-      display: flex;
-      align-items: center;
+   & > md-icon.md-icon {
+      margin-right: 16px;
    }
+}
+
+// Expansion panel
+.mat-expansion-panel .mat-expansion-panel-header-title {
+   display: flex;
+   align-items: center;
 
    & > md-icon.md-icon {
       margin-right: 16px;
