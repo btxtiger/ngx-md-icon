@@ -1,6 +1,7 @@
 import {
    ChangeDetectionStrategy,
    Component,
+   ElementRef,
    HostBinding,
    Input,
    OnChanges,
@@ -8,11 +9,12 @@ import {
    SimpleChanges,
    ViewEncapsulation,
 } from '@angular/core';
+import { BooleanDirectiveType, BooleanDirectiveValue } from '../../core/boolean-directive.type';
 
 @Component({
    selector: 'md-icon',
    templateUrl: './ngx-md-icon.component.html',
-   styleUrls: ['./ngx-md-icon.component.scss'],
+   styleUrls: ['./ngx-md-icon.component.scss', './mat-mdc.component.scss'],
    changeDetection: ChangeDetectionStrategy.OnPush,
    encapsulation: ViewEncapsulation.None,
 })
@@ -36,6 +38,9 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
    public texts?: string[];
 
    @Input()
+   public middle: BooleanDirectiveType;
+
+   @Input()
    public xViewBox: number = 24;
 
    @Input()
@@ -49,18 +54,23 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
 
    public renderIcons: string[] = [];
 
-   constructor() {}
+   constructor(private elementRef: ElementRef) {}
 
    ngOnInit(): void {
       if (!this.icon && !this.icons && !this.texts) {
          console.error('NgxMdIconComponent: Input() [icon] or [icons] or [texts] is required');
       }
       this.init();
+      this.alignIconMiddle();
    }
 
    ngOnChanges(changes: SimpleChanges): void {
       if ((changes['icon'] && !changes['icon'].isFirstChange()) || (changes['icons'] && !changes['icons'].isFirstChange())) {
          this.init();
+      }
+
+      if (changes['vAlignMiddle'] && !changes['vAlignMiddle'].isFirstChange()) {
+         this.alignIconMiddle();
       }
    }
 
@@ -82,5 +92,17 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
       }
 
       this.renderIcons = icons;
+   }
+
+   /**
+    * Align Icon Middle
+    */
+   private alignIconMiddle(): void {
+      this.middle = BooleanDirectiveValue(this.middle);
+      if (this.middle) {
+         this.elementRef.nativeElement.style.verticalAlign = 'middle';
+      } else {
+         this.elementRef.nativeElement.style.verticalAlign = void 0;
+      }
    }
 }

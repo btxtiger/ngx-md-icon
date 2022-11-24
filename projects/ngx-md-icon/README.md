@@ -17,6 +17,11 @@ npm i -S @mdi/js
 
 ### <a href="https://btxtiger.github.io/ngx-md-icon/" target="_blank">⇨ DEMO</a>
 
+### Compatibility
+✅ Angular Material 15+ (MDC)<br>
+✅ Angular Material 2+<br>
+😊️ More compatibility contributions welcome
+
 ### Browse icons
 
 To find your required icon, it is recommendable to use this browser extension,
@@ -66,6 +71,10 @@ export class AppComponent {
 // Text
 <md-icon [texts]="['CocaCola']" [xViewBox]="80" [yViewBox]="48" [yTextPos]="29"></md-icon>
 <md-icon [texts]="['EK']" [icon]="icons.person" class="person-overlay"></md-icon>
+
+// Vertical align middle
+<span>Cold <md-icon [icon]="icons.arrowLeftRight" middle></md-icon> Warm</span>
+
 ```
 
 ### Usage with Angular Material

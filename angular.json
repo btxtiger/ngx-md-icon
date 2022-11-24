@@ -82,7 +82,7 @@
               "src/assets"
             ],
             "styles": [
-              "projects/demo/src/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -125,10 +125,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "demo:build:production"
+              "browserTarget": "ngx-md-icon-demo:build:production"
             },
             "development": {
-              "browserTarget": "demo:build:development"
+              "browserTarget": "ngx-md-icon-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -136,7 +136,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo:build"
+            "browserTarget": "ngx-md-icon-demo:build"
           }
         },
         "test": {

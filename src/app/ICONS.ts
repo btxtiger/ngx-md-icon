@@ -1,13 +1,16 @@
 import {
-   mdiAccount,
+   mdiAccount, mdiArrowLeftRight,
+   mdiBellOff, mdiDelete,
    mdiDolphin,
    mdiDuck,
-   mdiElephant,
+   mdiElephant, mdiEmoticonOutline,
+   mdiFactory,
    mdiForklift,
-   mdiHorse,
-   mdiOwl,
+   mdiHorse, mdiMenu,
+   mdiOwl, mdiShare, mdiShareVariant, mdiShareVariantOutline,
    mdiSlashForward,
-   mdiTeddyBear,
+   mdiTeddyBear, mdiTrashCan,
+   mdiTrayArrowDown,
 } from '@mdi/js';
 
 export const APP_ICONS = {
@@ -20,4 +23,12 @@ export const APP_ICONS = {
    elephant: mdiElephant,
    horse: mdiHorse,
    owl: mdiOwl,
+   manufacturer: mdiFactory,
+   download: mdiTrayArrowDown,
+   smile: mdiEmoticonOutline,
+   share: mdiShareVariantOutline,
+   menu: mdiMenu,
+   disableAlerts: mdiBellOff,
+   delete: mdiDelete,
+   arrowLeftRight: mdiArrowLeftRight,
 };
