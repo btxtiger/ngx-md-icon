@@ -70,9 +70,11 @@ export class AppComponent {
 
 ### Usage with Angular Material
 
-The component works out of the box with Angular Material. In order to preserve compatibility, the icon also gets
-the `.mat-icon` class attached.
-However, it is required to apply a bugfix for this open issue, to properly center the icon in the button.<br>
+The component should work out of the box with Angular Material.
+
+
+#### Bug: Angular < 15
+However, for Angular < 15 it is required to apply a bugfix for this open issue, to properly center the icon in the button.<br>
 Read more: [https://github.com/angular/components/issues/18401](https://github.com/angular/components/issues/18401)
 
 ```scss
