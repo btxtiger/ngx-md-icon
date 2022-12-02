@@ -1,6 +1,6 @@
 {
    "name": "ngx-md-icon",
-   "version": "1.1.16",
+   "version": "1.1.17",
    "description": "Easily use Material Design Icons @mdi/js with Angular",
    "author": "Jonas Gnioui <btxtiger@icloud.com>",
    "license": "MIT",
