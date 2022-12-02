@@ -82,14 +82,12 @@
 }
 
 // Select
-.mat-mdc-select {
-   .mdc-list-item__primary-text, .mat-mdc-select-value-text mat-select-trigger {
-      display: flex;
-      align-items: center;
+.mat-mdc-select .mat-mdc-select-value-text mat-select-trigger,
+.mat-mdc-select-panel .mdc-list-item__primary-text {
+   display: flex;
+   align-items: center;
 
-      & > md-icon.md-icon {
-         margin-right: 16px;
-      }
+   & > md-icon.md-icon {
+      margin-right: 8px;
    }
 }
-
