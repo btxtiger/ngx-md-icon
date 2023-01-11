@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
    declarations: [AppComponent],
@@ -35,6 +36,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
       MatDatepickerModule,
       MatTabsModule,
       MatTooltipModule,
+      MatSelectModule,
    ],
    providers: [],
    bootstrap: [AppComponent],

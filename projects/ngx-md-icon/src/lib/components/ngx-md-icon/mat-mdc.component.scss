@@ -97,6 +97,13 @@
 }
 
 // Select
+.mat-mdc-select .mat-mdc-select-value-text mat-select-trigger {
+   padding-left: 32px;
+   .md-icon {
+      position: absolute;
+      margin-left: -32px;
+   }
+}
 .mat-mdc-select .mat-mdc-select-value-text mat-select-trigger,
 .mat-mdc-select-panel .mdc-list-item__primary-text {
    display: flex;
