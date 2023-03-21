@@ -22,8 +22,8 @@ export class NgxMdIconComponent implements OnInit, OnChanges {
    @HostBinding('class')
    public classes = 'md-icon';
 
-   @HostBinding('role')
-   public role = 'img';
+   @HostBinding('attr.role')
+   public attrRole = 'img';
 
    @HostBinding('style.width')
    public styleWidth: string | undefined;
