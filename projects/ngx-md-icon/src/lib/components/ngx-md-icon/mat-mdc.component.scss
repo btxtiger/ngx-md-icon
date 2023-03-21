@@ -54,6 +54,7 @@
 .mat-mdc-form-field-icon-suffix {
    & > md-icon.md-icon {
       padding: 12px;
+      box-sizing: content-box;
    }
 }
 
